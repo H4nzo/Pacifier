@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject TopContainer, BottomContainer, PlayContainer;
 
-    private const string NEW_GAME = "NEW_GAME";
-    private const string LOAD_GAME = "LOAD_GAME";
-
+    private const string MAINSCENE = "MAIN 1";
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     public void Play()
     {
         TopContainer.SetActive(false);
@@ -28,13 +30,13 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene(NEW_GAME);
+        SceneManager.LoadScene(MAINSCENE);
         PlayerPrefs.DeleteAll();
     }
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(LOAD_GAME);
+        SceneManager.LoadScene(MAINSCENE);
     }
 
 

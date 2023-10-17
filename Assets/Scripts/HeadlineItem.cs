@@ -7,7 +7,7 @@ public class HeadlineItem : MonoBehaviour
 {
     float tickerWidth;
     float pixelsPerSecond;
-    RectTransform rt;
+    public RectTransform rt;
 
     public float GetXPosition { get { return rt.anchoredPosition.x; } }
     public float GetWidth { get { return rt.rect.width; } }
